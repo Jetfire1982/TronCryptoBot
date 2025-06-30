@@ -165,9 +165,9 @@ bot.on("message", async (msg) => {
                                             //заполняем массив импульсно идущих пар
                                             if (lastImpacts.length == 20) {
                                                 lastImpacts.shift(); //удаляем первый элемент
-                                                lastImpacts.push(` |${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()}    `); //добавляем в конец новый
+                                                lastImpacts.push(` ${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()}    `); //добавляем в конец новый
                                             } else {
-                                                lastImpacts.push(` |${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()}    `);
+                                                lastImpacts.push(` ${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()}    `);
                                             }
                                             bot.sendMessage(chatId, `Пара ${el.symbol} летит вверх!`)
                                         }
@@ -175,9 +175,9 @@ bot.on("message", async (msg) => {
                                             //заполняем массив импульсно идущих пар
                                             if (lastImpacts.length == 20) {
                                                 lastImpacts.shift(); //удаляем первый элемент
-                                                lastImpacts.push(` |${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()}    `); //добавляем в конец новый
+                                                lastImpacts.push(` ${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()} `); //добавляем в конец новый
                                             } else {
-                                                lastImpacts.push(` |${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()}    `);
+                                                lastImpacts.push(` ${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()} `);
                                             }
                                             bot.sendMessage(chatId, `Пара ${el.symbol} летит вниз!`)
                                         }
@@ -186,9 +186,9 @@ bot.on("message", async (msg) => {
                                             //заполняем массив импульсно идущих пар
                                             if (lastImpacts.length == 20) {
                                                 lastImpacts.shift(); //удаляем первый элемент
-                                                lastImpacts.push(` |${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()}    `); //добавляем в конец новый
+                                                lastImpacts.push(` ${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()} `); //добавляем в конец новый
                                             } else {
-                                                lastImpacts.push(` |${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()}    `);
+                                                lastImpacts.push(` ${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()} `);
                                             }
                                             bot.sendMessage(chatId, `Пара ${el.symbol} летит вверх!`)
                                         }
@@ -196,9 +196,9 @@ bot.on("message", async (msg) => {
                                             //заполняем массив импульсно идущих пар
                                             if (lastImpacts.length == 20) {
                                                 lastImpacts.shift(); //удаляем первый элемент
-                                                lastImpacts.push(` |${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()}    `); //добавляем в конец новый
+                                                lastImpacts.push(` ${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()} `); //добавляем в конец новый
                                             } else {
-                                                lastImpacts.push(` |${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()}    `);
+                                                lastImpacts.push(` ${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()} `);
                                             }
                                             bot.sendMessage(chatId, `Пара ${el.symbol} летит вниз!`)
                                         }
@@ -212,9 +212,9 @@ bot.on("message", async (msg) => {
                                             //добавляем сигнал в массив прошедших сигналов из 20 штук
                                             if (lastSignals.length == 20) {
                                                 lastSignals.shift(); //удаляем первый элемент
-                                                lastSignals.push(` |${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()}    `); //добавляем в конец новый
+                                                lastSignals.push(` ${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()} `); //добавляем в конец новый
                                             } else {
-                                                lastSignals.push(` |${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()}    `);
+                                                lastSignals.push(` ${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()} `);
                                             }
                                             bot.sendMessage(chatId, `Пара ${el.symbol} близка к целевому значению ${elem}!    ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()}`)
                                         }
@@ -247,9 +247,9 @@ bot.on("message", async (msg) => {
                                             //добавляем сигнал в массив прошедших сигналов из 20 штук
                                             if (lastSignals.length == 20) {
                                                 lastSignals.shift(); //удаляем первый элемент
-                                                lastSignals.push(` |${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()}    `); //добавляем в конец новый
+                                                lastSignals.push(` ${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()} `); //добавляем в конец новый
                                             } else {
-                                                lastSignals.push(` |${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()}    `);
+                                                lastSignals.push(` ${el.symbol} - ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()} `);
                                             }
                                             bot.sendMessage(chatId, `Пара ${el.symbol} близка к целевому значению ${elem}!    ${myDate.getHours() + "h:" + myDate.getMinutes() + "m   " + myDate.toDateString()}`)
                                         }
