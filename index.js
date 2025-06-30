@@ -66,7 +66,6 @@ bot.setMyCommands([
     { command: "/start", description: "Начальное приветствие" },
     // { command: "/test1", description: "Запрос binance" },
     // { command: "/test2", description: "Запрос binance" },
-    { command: "/start", description: "Получение статуса работы бота" },
     { command: "/start_stop_exchange_with_binance", description: "Запуск/остановка обмена с бинанс" },
     { command: "/start_stop_looking_for_impact", description: "Запуск/остановка поиск импульсов по парам" },
     { command: "/start_stop_impacts_alert", description: "Запуск/остановка оповещения импульсов" },
@@ -91,8 +90,8 @@ bot.setMyCommands([
     },
 
     { command: "/status", description: "Получение статуса работы бота" },
-    { command: '/lastSignals', description: "Последние сигналы" },
-    { command: '/lastImpacts', description: "Последние импульсы по парам" },
+    { command: '/lastsignals', description: "Последние сигналы" },
+    { command: '/lastimpacts', description: "Последние импульсы по парам" },
     { command: "/getstatus", description: "Получение статуса по конкретной паре (getstatus_ticker)" },
 
     { command: "/info", description: "Получить информацию о пользователе" },
@@ -318,11 +317,11 @@ bot.on("message", async (msg) => {
         }
     }
 
-    if (text === "/lastSignals") {
+    if (text === "/lastsignals") {
         return bot.sendMessage(chatId, `Last sigals = ${JSON.stringify(lastSignals)}`);
     }
 
-    if (text === "/lastImpacts") {
+    if (text === "/lastimpacts") {
         return bot.sendMessage(chatId, `Last impacts = ${JSON.stringify(lastImpacts)}`);
     }
 
