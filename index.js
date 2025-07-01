@@ -49,6 +49,8 @@ let lastSignals = [];
 let lastImpacts = [];
 //ниже разрешение/запрет на сигнал при импульсе
 let impactsAlert = true;
+//ниже задаем дельту в процентах при подходе к целевому значению:
+let deltaSignal = 1;
 //ниже задаем дельту в процентах для импульсного движения цены:
 let deltaImpact = 0.8;
 //структура объекта выше следующая пример:
@@ -205,7 +207,7 @@ bot.on("message", async (msg) => {
 
                                     //Теперь прописываем алгоритм сравнения с целевыми значениями
                                     obTargets[el.symbol].targets.forEach(elem => {
-                                        if (Math.abs(100 - (elem * 100 / el.price)) <= 0.5) {
+                                        if (Math.abs(100 - (elem * 100 / el.price)) <= deltaSignal) {
                                             //удаляем значение которое дало сигнал из контролируемых чтобы постоянно не сигналило;
                                             obTargets[el.symbol].targets = obTargets[el.symbol].targets.slice(0, index).concat(obTargets[el.symbol].targets.slice(index + 1));
                                             //добавляем сигнал в массив прошедших сигналов из 20 штук
@@ -240,7 +242,7 @@ bot.on("message", async (msg) => {
                                     }
 
                                     obTargets[el.symbol].targets.forEach((elem, index) => {
-                                        if (Math.abs(100 - (elem * 100 / el.price)) <= 0.5) {
+                                        if (Math.abs(100 - (elem * 100 / el.price)) <= deltaSignal) {
                                             //удаляем значение которое дало сигнал из контролируемых чтобы постоянно не сигналило;
                                             obTargets[el.symbol].targets = obTargets[el.symbol].targets.slice(0, index).concat(obTargets[el.symbol].targets.slice(index + 1));
                                             //добавляем сигнал в массив прошедших сигналов из 20 штук
